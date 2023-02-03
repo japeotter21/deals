@@ -28,7 +28,7 @@ function App() {
   }
 
   return (
-    <div className="App" style={{height:'100vh', background:'radial-gradient(#b2dfdb, #cfd8dc)'}}>
+    <div className="App" style={{height:'100%', background:'radial-gradient(#b2dfdb, #cfd8dc)'}}>
       <AppBar sx={{background:'#3949ab'}}>
         <Toolbar sx={{margin:'0 9vw 0 9vw'}}>
           <IconButton sx={{color:'inherit'}} onClick={handleMenu}>
@@ -70,29 +70,31 @@ function App() {
       </Menu>
       <Box sx={{height:'80px'}}></Box>
       <Box sx={{margin:'0 10vw 0 10vw'}}>
-        <Paper variant="elevation" elevation={6} sx={{height:'20vh', marginBottom:'2vh', position:'relative', display:'flex', padding:'20px 20px'}}>
+        <Paper variant="elevation" elevation={6} sx={{height:'20vh', minHeight:'200px', marginBottom:'2vh', position:'relative',
+          display:'flex', padding:'20px 20px', overflowX:'auto'}}
+        >
           {placeholders.map((item,id)=>
           id % 2 === 1 ?
-          <Card sx={{height:'15vh', margin:'0 1vw', wordWrap:'break-word', maxWidth:'10vw'}} key={id} elevation={2}>
+          <Card sx={{height:'15vh', minHeight:'120px', minWidth:'150px', margin:'0 1vw', wordWrap:'break-word', maxWidth:'10vw'}} key={id} elevation={2}>
             <CardActionArea sx={{height:'100%'}}>
               <CardContent>
                 <Typography variant="subtitle2">Deal: --% off</Typography>
                 <br />
-                <Typography variant="caption">Name of Restaurant</Typography>
+                <Typography variant="caption">Name of --</Typography>
                 <br />
-                <Typography variant="caption">Restaurant Logo</Typography>
+                <Typography variant="caption">-- Logo</Typography>
               </CardContent>
             </CardActionArea>
           </Card>
           :
-          <Card sx={{height:'15vh', margin:'0 1vw', wordWrap:'break-word', maxWidth:'10vw'}} key={id} elevation={2}>
+          <Card sx={{height:'15vh', minHeight:'120px', minWidth:'150px', margin:'0 1vw', wordWrap:'break-word', maxWidth:'10vw'}} key={id} elevation={2}>
             <CardActionArea sx={{height:'100%'}}>
               <CardContent>
                 <Typography variant="subtitle2">Deal: BOGO on Certain Things</Typography>
                 <br />
-                <Typography variant="caption">Name of Restaurant</Typography>
+                <Typography variant="caption">Name of --</Typography>
                 <br />
-                <Typography variant="caption">Restaurant Logo</Typography>
+                <Typography variant="caption">-- Logo</Typography>
               </CardContent>
             </CardActionArea>
           </Card>
@@ -101,8 +103,8 @@ function App() {
             New/Best Deals
           </Typography>
         </Paper>
-        <Paper variant="elevation" elevation={6} sx={{height:'20vh', marginBottom:'2vh', position:'relative', display:'flex', padding:'20px 20px'}}>
-          <Card sx={{height:'15vh', margin:'0 1vw', background:'#bdbdbd'}} elevation={2}>
+        <Paper variant="elevation" elevation={6} sx={{height:'20vh', minHeight:'200px', marginBottom:'2vh', position:'relative', display:'flex', padding:'20px 20px'}}>
+          <Card sx={{height:'15vh', minHeight:'120px', minWidth:'150px', margin:'0 1vw', background:'#bdbdbd'}} elevation={2}>
               <CardActionArea sx={{height:'100%'}}>
                 <CardContent>
                   <Typography variant="caption">Name of Restaurant</Typography>
@@ -114,7 +116,7 @@ function App() {
                 </CardContent>
               </CardActionArea>
             </Card>
-            <Card sx={{height:'15vh', margin:'0 1vw'}} elevation={2}>
+            <Card sx={{height:'15vh', minHeight:'120px', minWidth:'150px', margin:'0 1vw'}} elevation={2}>
               <CardActionArea sx={{height:'100%'}}>
                 <CardContent>
                   <Typography variant="caption">Name of Restaurant</Typography>
