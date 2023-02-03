@@ -28,7 +28,7 @@ function App() {
   }
 
   return (
-    <div className="App" style={{height:'100%', background:'radial-gradient(#b2dfdb, #cfd8dc)'}}>
+    <div className="App" style={{minHeight:'100vh', height:'100%', background:'radial-gradient(#b2dfdb, #cfd8dc)'}}>
       <AppBar sx={{background:'#3949ab'}}>
         <Toolbar sx={{margin:'0 9vw 0 9vw'}}>
           <IconButton sx={{color:'inherit'}} onClick={handleMenu}>
